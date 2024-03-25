@@ -2,6 +2,8 @@
 
 :root {
   --clr-neutral-999: hsl(255, 100%, 100%);
+  --clr-neutral-800: hsl(0, 0%, 80%);
+  --clr-neutral-200: hsl(0, 0%, 10%);
   --clr-neutral-100: hsl(0, 0%, 0%);
 
   --fontstack-system-sans: ui-sans-serif, system-ui, sans-serif,
@@ -35,6 +37,9 @@ html {
 /* Increase line-height in all browsers to match accessibility standards */
 
 body {
+  background: var(--clr-neutral-200);
+  color: var(--clr-neutral-800);
+  font-family: var(--fontstack-system-sans);
   line-height: 1.5;
 }
 
@@ -42,6 +47,12 @@ body {
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+}
+
+:where(h2, h3, h4) {
+  color: var(--clr-neutral-999);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
 }
 
 /* Sets all paragraphs to have a comfortable reading width (based on the font size) [1] */

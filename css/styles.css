@@ -1,11 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
 .primary-nav {
   padding: 1.5rem;
 }
 
 .primary-nav__list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -21,7 +31,7 @@
 }
 
 .primary-nav__link:where(:hover, :focus-visible) {
-  color: white;
+  color: var(--clr-neutral-999);
 }
 
 .about {
@@ -31,6 +41,137 @@
 }
 
 .about__title {
-  color: white;
+  color: var(--clr-neutral-999);
   font-size: 3.5rem;
+}
+
+.about__tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 1.5rem;
+}
+
+/* Mobile First Design - Exceeds */
+
+@media only screen and (min-width: 768px) {
+  .about__tech {
+    justify-content: start;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-grid {
+  display: grid;
+
+  gap: 1.5rem;
+}
+
+/* Mobile First Design - Exceeds */
+
+@media only screen and (min-width: 768px) {
+  .project-grid {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .project-grid {
+    gap: 3rem;
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Mobile First Design - Exceeds */
+
+@media only screen and (min-width: 768px) {
+  .project {
+    padding: 1.5rem;
+  }
+}
+
+.project__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--clr-neutral-999);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project__title:where(:hover, :focus-visible) {
+  text-decoration: underline;
+}
+
+.project__tech {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  max-width: 880px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__input {
+  padding: 0.5rem 1rem;
+}
+
+.footer {
+  background: var(--clr-neutral-100);
+  padding: 3rem 1.5rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Mobile First Design - Exceeds */
+
+@media only screen and (min-width: 768px) {
+  .footer__content {
+    flex-direction: row;
+  }
+}
+
+.footer__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

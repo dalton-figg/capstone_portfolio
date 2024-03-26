@@ -54,6 +54,11 @@
   padding-top: 1.5rem;
 }
 
+.about-js {
+  cursor: pointer;
+  border-bottom: 3px solid lightblue;
+}
+
 /* Mobile First Design - Exceeds */
 
 @media only screen and (min-width: 768px) {
@@ -135,7 +140,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .form__group {
@@ -145,7 +150,33 @@
 }
 
 .form__input {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0.35rem;
+  background: none;
+  border: none;
+  appearance: none;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.form__input:focus {
+  outline: none;
+  background: none;
+}
+
+.form__submit {
+  padding: 0.5rem;
+  max-width: 200px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.form__submit:where(:hover, :focus-visible) {
+  cursor: pointer;
+  background: white;
+  color: black;
 }
 
 .footer {

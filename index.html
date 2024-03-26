@@ -6,13 +6,15 @@
     <title>Treehouse | Capstone Portfolio</title>
 
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/utility.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+
+    <script src="/js/app.js" defer></script>
   </head>
   <body>
     <header>
       <nav class="primary-nav">
         <ul class="primary-nav__list">
+          <!-- all navigation links are present and work correctly -->
           <li class="primary-nav__item">
             <a class="primary-nav__link" href="#">&lt;/&gt;</a>
           </li>
@@ -33,7 +35,7 @@
     </header>
     <main class="container">
       <section class="about" id="about">
-        <h1 class="about__title">&lt;/ Hello World</h1>
+        <h1 class="about__title">&lt;/ Hello <span class='about-js' id="js-typing">World</span></h1>
         <p class="about__copy">
           I'm Dalton, a website developer. Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Cumque explicabo maxime nesciunt
@@ -50,6 +52,7 @@
           maiores ad maxime quae modi! Consequuntur.
         </p>
         <div class="about__tech">
+          <!-- SVG images for icons -->
           <svg width="40" height="40" viewBox="0 0 384 512">
             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
             <path
@@ -96,6 +99,7 @@
       </section>
       <section class="projects" id="projects">
         <h2>Projects</h2>
+        <!-- 4+ (5) live projects linked -->
         <div class="project-grid">
           <div class="project">
             <a
@@ -168,8 +172,9 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h2>Get in touch</h2>
-        <form class="form">
+        <h2>Contact</h2>
+        <p>Get in touch by sending a message below!</p>
+        <form class="form" id="form">
           <div class="form__group">
             <label for="email">Email address</label>
             <input
@@ -183,8 +188,10 @@
 
           <div class="form__group">
             <label for="message">Message</label>
-            <textarea class="form__input" id="message" required></textarea>
+            <input type="text" class="form__input" id="message" required></input>
           </div>
+
+          <button class="form__submit" type="submit">Send message</button>
         </form>
       </section>
     </main>
@@ -198,7 +205,11 @@
           <p>&copy; 2024 lorem ipsum</p>
         </div>
         <div>
-          <a href="https://github.com/dalton-figg" target="_blank" aria-label="Go to my GitHub page">
+          <a
+            href="https://github.com/dalton-figg"
+            target="_blank"
+            aria-label="Go to my GitHub page"
+          >
             <svg width="32" height="32" viewBox="0 0 448 512">
               <path
                 fill="#fff"

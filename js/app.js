@@ -40,10 +40,14 @@ const typeCharacter = (i, index) => {
   } else setTimeout(() => deleteCharacter(), 1000);
 };
 
+let hasClicked = false;
+
 typingElement.addEventListener('click', () => {
-  if (typingElement) {
+  if (typingElement && !hasClicked) {
     if (typingElement.innerHTML !== '') deleteCharacter();
 
     if (typingElement.innerHTML === '') typeCharacter();
   }
+
+  hasClicked = true;
 });

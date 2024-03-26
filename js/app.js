@@ -29,9 +29,7 @@ const deleteCharacter = () => {
   if (typingElement.innerHTML.length > 0) {
     typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
     setTimeout(deleteCharacter, typingSpeed);
-  } else {
-    setTimeout(() => typeCharacter((i = 0), generateRandIndex()), 1000);
-  }
+  } else setTimeout(() => typeCharacter((i = 0), generateRandIndex()), 1000);
 };
 
 const typeCharacter = (i, index) => {
@@ -39,9 +37,7 @@ const typeCharacter = (i, index) => {
     typingElement.innerHTML += wantedCopy[index][i];
     i++;
     setTimeout(() => typeCharacter(i, index), typingSpeed);
-  } else {
-    setTimeout(() => deleteCharacter(), 1000);
-  }
+  } else setTimeout(() => deleteCharacter(), 1000);
 };
 
 typingElement.addEventListener('click', () => {

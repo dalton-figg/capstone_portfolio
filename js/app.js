@@ -40,6 +40,9 @@ const typeCharacter = (i, index) => {
   } else setTimeout(() => deleteCharacter(), 1000);
 };
 
+
+// ensures that the button can only be clicked once, otherwise multiple words will be typed
+
 let hasClicked = false;
 
 typingElement.addEventListener('click', () => {
